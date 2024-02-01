@@ -1,8 +1,9 @@
 a, b = map(int, input().split())
 
-def cal(a, b):
-    return min([a, b]) + 10, max([a, b]) * 2
+def calculate(a, b):
+    if a > b:
+        return a * 2, b + 10
+    return a + 10, b * 2
 
-result = cal(a, b)
-result.sort()
+result = calculate(a, b)
 print(*result, sep=' ')
