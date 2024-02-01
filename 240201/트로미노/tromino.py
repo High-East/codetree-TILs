@@ -11,7 +11,7 @@ for i in range(n - 1):
 # check horizontal block
 for i in range(n):
     for j in range(m - 2):
-        block = arr[i][j: j + 2]
+        block = arr[i][j: j + 3]
         max_sum = max(max_sum, sum(block))
 
 # check vertical block
