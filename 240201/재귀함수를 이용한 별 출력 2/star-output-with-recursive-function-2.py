@@ -1,14 +1,14 @@
 N = int(input())
 
-def draw_star(n, mode='descend'):
-    print(" ".join(['*'] * n))
-    if mode == 'descend':
-        if n == 1:
-            return draw_star(n, "ascend")
-        return draw_star(n - 1, mode)
-    else:
-        if n == N:
-            return
-        return draw_star(n + 1, mode)
+def print_star(n):
+    if n == 0:
+        return
+    for _ in range(n):
+        print("*", end=' ')
+    print("")
+    print_star(n - 1)
+    for _ in range(n):
+        print("*", end=' ')
+    print("")
 
-draw_star(N)
+print_star(N)
