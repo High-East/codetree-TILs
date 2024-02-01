@@ -5,10 +5,10 @@ def print_star(n):
         return
     for _ in range(n):
         print("*", end=' ')
-    print("")
+    print()
     print_star(n - 1)
     for _ in range(n):
         print("*", end=' ')
-    print("")
+    print()
 
 print_star(N)
