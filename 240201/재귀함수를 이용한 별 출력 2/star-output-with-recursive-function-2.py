@@ -3,7 +3,7 @@ N = int(input())
 def draw_star(n, mode='descend'):
     print(" ".join(['*'] * n))
     if mode == 'descend':
-        if n == N:
+        if n == 1:
             return draw_star(n, "ascend")
         return draw_star(n - 1, mode)
     else:
