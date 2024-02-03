@@ -13,7 +13,7 @@ for i in range(5):
             team_3 = sum(arr) - (team_1 + team_2)
             if team_1 == team_2 == team_3:
                 continue
-            diff = min(result, max([team_1, team_2, team_3]) - min([team_1, team_2, team_3]))            
+            diff = max([team_1, team_2, team_3]) - min([team_1, team_2, team_3])
             result = min(result, diff)
 if result == 5000:
     result = -1
