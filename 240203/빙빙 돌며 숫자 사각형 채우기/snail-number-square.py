@@ -11,16 +11,23 @@ def in_range(x, y):
 # 위치 및 방향 초기화
 x, y, d = 0, 0, 0
 
-for i in range(1, n * m + 1):
-    arr[x][y] = i
+# 초기값
+arr[x][y] = 1
+
+for i in range(2, n * m + 1):
+    nx = x + dxs[d]
+    ny = y + dys[d]
     
     # 방향 회전
-    if not in_range(x + dxs[d], y + dys[d]) or (arr[x + dxs[d]][y + dys[d]] != 0):
+    if not in_range(nx, ny) or (arr[nx][ny] != 0):
         d = (d + 1) % 4
     
     # 전진
     x += dxs[d]
     y += dys[d]
+
+    # 채우기
+    arr[x][y] = i
 
 for x in arr:
     print(*x)
