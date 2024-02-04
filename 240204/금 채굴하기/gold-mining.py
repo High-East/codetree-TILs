@@ -24,7 +24,7 @@ def count_golds(x, y, k):
 max_golds = 0
 for i in range(n):
     for j in range(n):
-        for k in range(n):
+        for k in range(2 * (n - 1) + 1):
             golds = count_golds(i, j, k)
             benefit = (golds * m) - (k * k + (k + 1) * (k + 1))
             if benefit >= 0:
